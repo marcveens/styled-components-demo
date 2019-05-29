@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from '@emotion/styled';
 import { extendWithSpacings, ExtendWithSpacingsProps } from '../spacingHelper';
 
 type TableProps = ExtendWithSpacingsProps;
