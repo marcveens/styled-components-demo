@@ -1,8 +1,11 @@
-import styled, { css } from 'styled-components/';
+import styled, { css } from 'styled-components/macro';
 import { colors } from '../../styles/colors';
-import { ButtonProps } from './Button';
 
-export const StyledButton = styled.span<ButtonProps>`
+type ButtonProps = {
+    backgroundColor?: string;
+}
+
+export const Button = styled.button<ButtonProps>`
     display: inline-flex;
     align-self: flex-start;
     align-items: center;
@@ -13,9 +16,10 @@ export const StyledButton = styled.span<ButtonProps>`
 	font-size: 18px;
 	color: ${colors.white};
 	cursor: pointer;
-    background-color: ${colors.theme.t20};
+    background-color: ${props => props.theme.backgroundColor};
     transition: .2s ease-in-out;
     text-align: center;
+    text-decoration: none;
 
     &:hover {
         text-decoration: none;
@@ -29,4 +33,14 @@ export const StyledButton = styled.span<ButtonProps>`
         opacity: .4;
         cursor: not-allowed;
     `}
+
+    ${props => props.backgroundColor && css`
+        background-color: ${props.backgroundColor};
+    `}
 `;
+
+Button.defaultProps = {
+    theme: {
+        backgroundColor: colors.theme.t20
+    }
+}
