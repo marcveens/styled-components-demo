@@ -1,13 +1,13 @@
 import React from 'react';
 import { Normalize } from 'styled-normalize';
-import { Layout } from '../ui/Layout/Layout';
+import { Layout } from '../styled-components/Layout/Layout';
 import { GlobalStyle } from '../styles/GlobalStyle';
 import { Link } from 'react-router-dom';
-import { Button } from '../ui/Button/Button.style';
-import { Table } from '../ui/Table/Table.style';
-import { Heading } from '../ui/Heading/Heading.style';
+import { Button } from '../styled-components/Button/Button.style';
+import { Table } from '../styled-components/Table/Table.style';
+import { Heading } from '../styled-components/Heading/Heading.style';
 import { colors } from '../styles/colors';
-import { Input } from '../ui/Forms/Input.style';
+import { Input } from '../styled-components/Forms/Input.style';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles/macawTheme';
 
